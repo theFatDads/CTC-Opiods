@@ -1,14 +1,6 @@
-.oHeader{
-  background:white;
-  text-align:center;
-  align:center
-  color: black;
-  width: 100%;
-  height: 100%;
-}
 html, body {
 	background: linear-gradient(332deg, #ff8c6a, #fa7575, #910efc);
-  background-size: 600% 600%;
+  background-size: 800% 800%;
   height: 100%;
 	animation: Gradient 15s ease infinite;
 }
@@ -23,6 +15,33 @@ html, body {
 	100% {
 		background-position: 0% 26%
 	}
+}
+
+/*box that takes up the space that the white header background used to take up*/
+.fillerbox {
+  width: 100%;
+  height: 100%;
+  opacity: 0%;
+}
+
+/*white header background */
+.oHeader{
+  position: fixed;
+  top:0;
+  background:white;
+  text-align:center;
+  color: black;
+  width: 100%;
+  height: 100%;
+}
+
+/*div containing logo, title, etc.*/
+.title-box {
+  position: fixed;
+  top: 15%;
+  left: 40%;
+  text-align: center;
+  margin: auto;
 }
 
 /*Title Text*/
