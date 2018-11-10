@@ -17,6 +17,18 @@ html, body {
 	}
 }
 
+@keyframes wiggle {
+	0% {
+		bottom: 15px;
+	}
+	50% {
+		bottom: 35px;
+	}
+	100% {
+		bottome: 15px;
+	}
+}
+
 /*box that takes up the space that the white header background used to take up*/
 .fillerbox {
   width: 100%;
@@ -38,23 +50,49 @@ html, body {
 /*div containing logo, title, etc.*/
 .title-box {
   position: relative;
-  top:25%;
+  top:12%;
+  bottom:10%;
   margin: auto;
 }
 
-/*Title Text*/
-.title-text {
-  text-align: center;
-  display: flex;
-  font-size: 6em;
+
+#logo{
+  width: 200px;
+  height:30vh;
 }
+
+/*Title Text*/
+#title-text {
+  display: auto;
+  font-size: 12vw;
+}
+
+.main-description{
+  font-size: 5vmin;
+  width:75%;
+  margin: auto;
+}
+
+#arrow{
+  position: static;
+  text-align: center;
+  bottom:10px;
+  height: 40%;
+}
+#V{
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  bottom: 15px;
+  height:1em;
+  font-size: 5vh;
+  animation: wiggle 2s ease infinite;
+}
+
 
  .btn-light, .btn-light:hover, .btn-light:active, .btn-light:visited {
   background-color: #e475fa !important;
   color: black; 
-}
-.logo{
-  width: 50%;
 }
 /* .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
   background-color: rgb(245, 129, 20) !important;
