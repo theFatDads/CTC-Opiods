@@ -1,13 +1,54 @@
+html, body {
+	background: linear-gradient(332deg, #ff8c6a, #fa7575, #910efc);
+  background-size: 800% 800%;
+  height: 100%;
+	animation: Gradient 15s ease infinite;
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 26%
+	}
+	50% {
+		background-position: 100% 75%
+	}
+	100% {
+		background-position: 0% 26%
+	}
+}
+
+/*box that takes up the space that the white header background used to take up*/
+.fillerbox {
+  width: 100%;
+  height: 100%;
+  opacity: 0%;
+}
+
+/*white header background */
 .oHeader{
-  background-image: linear-gradient(to bottom right, rgb(94, 22, 145) 60%, black );
-  border: 3px solid gray;
-  border-radius: 10px;
-  color: white;
-  margin: 1em;
+  position: fixed;
+  top:0;
+  background:white;
+  color: black;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
-body{
-  background-color: #3d1c63;
+
+/*div containing logo, title, etc.*/
+.title-box {
+  position: relative;
+  top:25%;
+  margin: auto;
 }
+
+/*Title Text*/
+.title-text {
+  text-align: center;
+  display: flex;
+  font-size: 6em;
+}
+
  .btn-light, .btn-light:hover, .btn-light:active, .btn-light:visited {
   background-color: #e475fa !important;
   color: black; 
@@ -39,6 +80,7 @@ body{
   left:40px;
   right:1em;
 } 
+
 /* The circles on the timeline */
 .container-fluid::after {
   content: '';
@@ -46,7 +88,7 @@ body{
   width: 25px;
   height: 25px;
   background-color: white;
-  border: 4px solid #e475fa;/*rgb(243, 183, 126);*/
+  /*border: 4px solid #e475fa;/*rgb(243, 183, 126);*/
   border-radius: 50%;
   top: 0px;
   z-index: 1;
