@@ -28,6 +28,17 @@ html, body {
 		bottome: 15px;
 	}
 }
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 
 /*box that takes up the space that the white header background used to take up*/
 .fillerbox {
@@ -88,8 +99,10 @@ html, body {
   font-size: 5vh;
   animation: wiggle 2s ease infinite;
 }
-
-
+#fadeinbox{
+  opacity: 0;
+  animation: fadeIn 4s linear forwards;
+}
  .btn-light, .btn-light:hover, .btn-light:active, .btn-light:visited {
   background-color: #e475fa !important;
   color: black; 
