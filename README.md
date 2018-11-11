@@ -13,3 +13,4 @@ In designing our website, we used:
 * Bootstrap
 * The Google Maps API
 * Data from data.CT.gov
+* https://realfavicongenerator.net for favicon generation from our logo
