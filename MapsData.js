@@ -2,7 +2,7 @@
 Data2GoogleMap
 By Finn Navin, Christopher Vassallo, and Jack Violet
 Created for the 2018 Connecticut Tech Competition Finalist Round
-Version: 11/11/18 @ 3:22PM.
+Version 11/11/18 @ 4:27 PM
 */
 
 String.prototype.caps = function () {
@@ -17,7 +17,7 @@ String.prototype.caps = function () {
   return caps
 }
 
-function addressToURL(address,city,state){
+function addressToURL(address, city, state) {
   /*Given an address, City, and state string, generates an address to be used based on the users device
   Picks Appple Maps on iPhones and iPads, and Google Maps for everything else.*/
   if ((navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("iPod") != -1) || (navigator.platform.indexOf("iPad") != -1)) {
@@ -44,6 +44,24 @@ function initgeoJSONMap(mapID, center, geoJSONLink, info) {
   var infoWindow = new google.maps.InfoWindow({
     maxWidth: 300,
   })
+  //Handles adding users' current location to the map
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      var locationIcon = "https://www.robotwoods.com/dev/misc/bluecircle.png"
+      var userPos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      var userMarker = new google.maps.Marker({
+        position: userPos,
+        map: map,
+        icon: locationIcon,
+      })
+      //Focuses map on user's location.
+      map.setCenter(userPos);
+      map.setZoom(10);
+    });
+  }
   map.data.addListener('click', function (event) {
     var mark = event.feature;
     let markInfo = {
@@ -74,9 +92,27 @@ function initGeocodeMap(mapID, center, geoLocatedData) {
   var infoWindow = new google.maps.InfoWindow({
     maxWidth: 300,
   })
+  //Handles adding users' current location to the map
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      var locationIcon = "https://www.robotwoods.com/dev/misc/bluecircle.png"
+      var userPos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      var userMarker = new google.maps.Marker({
+        position: userPos,
+        map: map,
+        icon: locationIcon,
+      })
+      //Focuses map on user's location.
+      map.setCenter(userPos);
+      map.setZoom(10);
+    });
+  }
   let request = new XMLHttpRequest();
   request.responseType = 'json';
-  request.open('GET', geoLocatedData,true);
+  request.open('GET', geoLocatedData, true);
   request.send();
   request.onload = function () {
     geocoded = request.response;
@@ -87,20 +123,39 @@ function initGeocodeMap(mapID, center, geoLocatedData) {
         title: geocoded[i].name, //TODO: ADD THIS PROPERTY WHEN GEOCODING.
         data: geocoded[i], //hopefully this just sets all data as a property of the marker.
       })
-      marker.addListener('click',function(){
-      let name = this.data.name //TODO: ADD THIS PROPERTY WHEN GEOCODING.
-      let address = this.data.address_components[0].short_name + " " + this.data.address_components[1].short_name;
-      let city = this.data.address_components[2].long_name;
-      let state = this.data.address_components[4].short_name;
-      let url = addressToURL(address, city, state);
-      let fullBox = formatInfoBox(name, address, city, state, url);
-      infoWindow.setContent(fullBox);
-      infoWindow.setPosition(this.data.geometry.location)
-      infoWindow.setOptions({
-        pixelOffset: new google.maps.Size(0, -40)
-      });
-      infoWindow.open(map)
+      marker.addListener('click', function () {
+        let name = this.data.name //TODO: ADD THIS PROPERTY WHEN GEOCODING.
+        let address = this.data.address_components[0].short_name + " " + this.data.address_components[1].short_name;
+        let city = this.data.address_components[2].long_name;
+        let state = this.data.address_components[4].short_name;
+        let url = addressToURL(address, city, state);
+        let fullBox = formatInfoBox(name, address, city, state, url);
+        infoWindow.setContent(fullBox);
+        infoWindow.setPosition(this.data.geometry.location)
+        infoWindow.setOptions({
+          pixelOffset: new google.maps.Size(0, -40)
+        });
+        infoWindow.open(map)
       })
     }
   }
 }
+
+function main() {
+  var CT = { //Connecticut centered location
+    lat: 41.5,
+    lng: -72.63,
+  };
+  var VT = {
+    lat: 44,
+    lng: -72.7
+  }
+  var mainMap = "boxMap";
+  var randomDat = "http://geodata.vermont.gov/datasets/3a87ceb1e3b944b89598abe6c4169f85_0.geojson"
+  var geocoded = "https://raw.githubusercontent.com/theFatDads/GoogleMapsData/master/geo-locations.json"
+  var drugBox = "https://data.ct.gov/api/geospatial/uem2-db2e?method=export&format=GeoJSON";
+  var careFacilities = "https://data.ct.gov/resource/htz8-fxbk.json";
+  initGeocodeMap(mainMap, CT, geocoded)
+  //initgeoJSONMap("map2", CT, drugBox, ["location_name", "location_1_address", "city", "state"]);
+}
+main()
