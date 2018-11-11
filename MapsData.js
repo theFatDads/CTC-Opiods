@@ -1,7 +1,6 @@
 /*
 GOOGLE MAPS DATA FUNCTIONS
-EXTRACTED FROM THEFATDADS GITHUB ORGANIZATION ON 11/10/18 @ 9:33 PM. 
-MODIFIED ON 11/11/18 @ 12:40
+EXTRACTED FROM THEFATDADS GITHUB ORGANIZATION ON 11/11/18 @ 1:09 PM
 */
 String.prototype.caps = function () {
   `Capitalizes the first letter of each word, used for geoJSON files with all-caps addresses.`
@@ -107,8 +106,6 @@ function initGeocodeMap(mapID, center, geoLocatedData) {
     }
   }
 }
-
-var geocoder = new google.maps.Geocoder(); //Creating the needed URL.
 function main() {
   var CT = { //Connecticut centered location
     lat: 41.5,
@@ -126,3 +123,4 @@ function main() {
   initGeocodeMap(mainMap, CT, geocoded)
   initgeoJSONMap("map2", CT, drugBox, ["location_name", "location_1_address", "city", "state"]);
 }
+main()
