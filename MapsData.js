@@ -1,6 +1,6 @@
 /*
 GOOGLE MAPS DATA FUNCTIONS
-EXTRACTED FROM THEFATDADS GITHUB ORGANIZATION ON 11/11/18 @ 1:09 PM
+EXTRACTED FROM THEFATDADS GITHUB ORGANIZATION ON 11/11/18 @ 1:09 PM, REMOVED MAIN FUNCTION.
 */
 String.prototype.caps = function () {
   `Capitalizes the first letter of each word, used for geoJSON files with all-caps addresses.`
@@ -106,21 +106,3 @@ function initGeocodeMap(mapID, center, geoLocatedData) {
     }
   }
 }
-function main() {
-  var CT = { //Connecticut centered location
-    lat: 41.5,
-    lng: -72.63,
-  };
-  var VT = {
-    lat: 44,
-    lng: -72.7
-  }
-  var mainMap = "boxMap";
-  var randomDat = "http://geodata.vermont.gov/datasets/3a87ceb1e3b944b89598abe6c4169f85_0.geojson"
-  var geocoded = "https://raw.githubusercontent.com/theFatDads/GoogleMapsData/master/geo-locations.json"
-  var drugBox = "https://data.ct.gov/api/geospatial/uem2-db2e?method=export&format=GeoJSON";
-  var careFacilities = "https://data.ct.gov/resource/htz8-fxbk.json";
-  initGeocodeMap(mainMap, CT, geocoded)
-  initgeoJSONMap("map2", CT, drugBox, ["location_name", "location_1_address", "city", "state"]);
-}
-main()
