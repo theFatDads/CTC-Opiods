@@ -12,7 +12,6 @@ $(window).scroll(function() {
   });
 //Initializing Maps
 var geocoder = new google.maps.Geocoder(); //Creating the needed URL.
-function main() {
   var CT = { //Connecticut centered location
     lat: 41.3,
     lng: -72.63,
@@ -21,6 +20,6 @@ function main() {
   var geocoded = "https://raw.githubusercontent.com/theFatDads/GoogleMapsData/master/geo-locations.json"
   var drugBox = "https://data.ct.gov/api/geospatial/uem2-db2e?method=export&format=GeoJSON";
   var processedCareFacilities = "https://data.ct.gov/resource/htz8-fxbk.json";
+function initBox(){
   initgeoJSONMap("boxMap", {lat:41.8,lng:-72.63}, drugBox, ["location_name", "location_1_address", "city", "state"]);
 }
-main();
