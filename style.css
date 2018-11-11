@@ -49,7 +49,7 @@ html, body {
 /*box that takes up the space that the white header background used to take up*/
 .fillerbox {
   width: 100%;
-  height: 100%;
+  height: 100%; 
   opacity: 0%;
   z-index: -1;
 }
@@ -61,7 +61,7 @@ html, body {
   background:white;
   color: black;
   width: 100%;
-  height: 100%;
+  height: 120%;/*Hopefully fixes the white bar not expanding on mobile by overflowing slightly*/
   text-align: center;
 }
 
