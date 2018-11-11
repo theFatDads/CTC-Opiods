@@ -1,20 +1,15 @@
 html, body {
-	background: linear-gradient(332deg, #ff8c6a, #fa7575, #910efc);
+  /*background: linear-gradient(332deg, #ff8c6a, #fa7575, #910efc);*/
+  background: #fa7575;
   background-size: 800% 800%;
   height: 100%;
-	animation: Gradient 15s ease infinite;
+	animation: Gradient 30s linear infinite;
 }
 
-@keyframes Gradient {
-	0% {
-		background-position: 0% 26%
-	}
-	50% {
-		background-position: 100% 75%
-	}
-	100% {
-		background-position: 0% 26%
-	}
+ @keyframes Gradient {
+   0%{background:#fa7575;}
+   50%{background:#910efc;}
+   100%{background:#fa7575;}
 }
 
 @keyframes wiggle {
