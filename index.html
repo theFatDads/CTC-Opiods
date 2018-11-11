@@ -2,17 +2,26 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags-->
+  <title>The Next Step</title>
+  <!-- Meta tags-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
+  <!--Main CSS File-->
   <link rel="stylesheet" href="style.css">
-  <title>The Next Step</title>
+  <!--BootStrap JS and JQuery-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <div id="navBar">Test</div>
   <div class="fillerbox"></div>
   <div class="oHeader">
     <div class="title-box">
@@ -74,27 +83,23 @@
     <div class="container-fluid card right">
       <div class="card-body">
         <h2 class="card-img-top">Step 3: Get rid of it!</h2>
-        <p class="card-body">There's gonna be some text here. not sure yet though</p>
+        <p class="card-body">When you or your loved one are done taking the drug you have been prescribed, it may be time to think about disposing of the drug. Below is a map with the locations of drop off boxes in Connecticut. Tap a location and press "get directions" to get directions to a location.</p>
         <a class="btn btn-light" data-toggle="collapse" href="#step3Expand" role="button" aria-expanded="false"
           aria-controls="step3Expand">
-          Link with href
+          Open Maps
         </a>
         <div class="collapse" id="step3Expand">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
-          anim
-          keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            <div class="map" id="boxMap"></div>
         </div>
       </div>
     </div>
   </div>
   <div class="space"></div>
-  <div class="footer" </body> <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-
+  <div class="footer"></div>
+</body>
+  <!--Data-importing Maps Functions included in Main.js-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0ryZpgxKmnM81pq9e-tAbh7Zu39G5BBI"></script>
+  <script src="MapsData.js"></script>
+  <!--Main js File-->
+  <script src="main.js"></script>
 </html>
