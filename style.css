@@ -61,7 +61,7 @@ html, body {
   background:white;
   color: black;
   width: 100%;
-  height: 120%;/*Hopefully fixes the white bar not expanding on mobile by overflowing slightly*/
+  height: 120%; /*Hopefully fixes the white bar not expanding on mobile by overflowing slightly*/
   text-align: center;
 }
 
