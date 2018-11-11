@@ -1,9 +1,12 @@
 /*
-GOOGLE MAPS DATA FUNCTIONS
-EXTRACTED FROM THEFATDADS GITHUB ORGANIZATION ON 11/11/18 @ 1:09 PM, REMOVED MAIN FUNCTION.
+Data2GoogleMap
+By Finn Navin, Christopher Vassallo, and Jack Violet
+Created for the 2018 Connecticut Tech Competition Finalist Round
+Version: 11/11/18 @ 3:22PM.
 */
+
 String.prototype.caps = function () {
-  `Capitalizes the first letter of each word, used for geoJSON files with all-caps addresses.`
+  /*Capitalizes the first letter of each word, used for geoJSON files with all-caps addresses.*/
   caps = []
   splitString = this.split(" ")
   for (let i = 0; i < splitString.length; i++) {
@@ -14,29 +17,24 @@ String.prototype.caps = function () {
   return caps
 }
 
-function addresstoUrl(address, city, state) {
-  'given an address, city and state string, return a Maps url to this address.'
-  return `https://www.google.com/maps/dir/?api=1&destination=${address.split(" ").join("+")},+${city},+${state}`
-  //return `https://www.google.com/maps/place/${address.split(" ").join("+")},+${city},+${state}`
-}
-
-function openMaps(url) {
-  'Opens map in native maps app if on mobile, otherwise opens map url in google maps.'
+function addressToURL(address,city,state){
+  /*Given an address, City, and state string, generates an address to be used based on the users device
+  Picks Appple Maps on iPhones and iPads, and Google Maps for everything else.*/
   if ((navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("iPod") != -1) || (navigator.platform.indexOf("iPad") != -1)) {
-    window.open("maps://" + url.slice(12))
+    return `https://maps.apple.com/?q=${address.split(" ").join("+")},+${city},+${state}`
   } else {
-    window.open(url);
-
+    return `https://www.google.com/maps/dir/?api=1&destination=${address.split(" ").join("+")},+${city},+${state}`
   }
 }
 
 function formatInfoBox(name, address, city, state, url) {
-  return `<b>${name}</b><p>${address} ${city}, ${state} \n</br><a onclick="openMaps('${url}')" href="#">Get Directions</a></p>`
+  /* Formats the data for each marker on the map to be used in the info box. */
+  return `<b>${name}</b><p>${address} ${city}, ${state} \n</br><a href="${url}">Get Directions</a></p>`
 }
 
 function initgeoJSONMap(mapID, center, geoJSONLink, info) {
-  'Initializes a google map, given a mapID, center for the map, and the link to a geoJSON file.'
-  'Info should be a list with the property directory: [name, address, city, state]'
+  /*Initializes a google map, given a mapID, center for the map, and the link to a geoJSON file.
+  Info should be a list with the property directory: [name, address, city, state]*/
   var map = new google.maps.Map(document.getElementById(mapID), {
     center: center,
     zoom: 7,
@@ -54,7 +52,7 @@ function initgeoJSONMap(mapID, center, geoJSONLink, info) {
       city: mark.getProperty(info[2]).caps(),
       state: mark.getProperty(info[3]),
     }
-    let url = addresstoUrl(markInfo.address, markInfo.city, markInfo.state)
+    let url = addressToURL(markInfo.address, markInfo.city, markInfo.state)
     let fullBox = formatInfoBox(markInfo.name, markInfo.address, markInfo.city, markInfo.state, url)
     infoWindow.setContent(fullBox);
     infoWindow.setPosition(event.feature.getGeometry().get());
@@ -66,7 +64,7 @@ function initgeoJSONMap(mapID, center, geoJSONLink, info) {
 }
 
 function initGeocodeMap(mapID, center, geoLocatedData) {
-  'Creates a new map with plotted points given a map DIV id, a center for the map, and data that has been geocoded using the Google API.'
+  /*Creates a new map with plotted points given a map DIV id, a center for the map, and data that has been geocoded using the Google API.*/
   let geocoded;
   var map = new google.maps.Map(document.getElementById(mapID), {
     center: center,
@@ -94,7 +92,7 @@ function initGeocodeMap(mapID, center, geoLocatedData) {
       let address = this.data.address_components[0].short_name + " " + this.data.address_components[1].short_name;
       let city = this.data.address_components[2].long_name;
       let state = this.data.address_components[4].short_name;
-      let url = addresstoUrl(address, city, state);
+      let url = addressToURL(address, city, state);
       let fullBox = formatInfoBox(name, address, city, state, url);
       infoWindow.setContent(fullBox);
       infoWindow.setPosition(this.data.geometry.location)
