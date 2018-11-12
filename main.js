@@ -10,6 +10,7 @@ $(window).scroll(function () {
     }
   });
 });
+
 //Initializing Maps
 var geocoder = new google.maps.Geocoder(); //Creating the needed URL.
 var CT = { //Connecticut centered location

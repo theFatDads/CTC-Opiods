@@ -51,13 +51,15 @@ body {
 
 @keyframes flyIn {
   0%{
-    top: -10%
+    top: -10%;
+    opacity: 0;
   }
   100%{
     top:0;
+    opacity: 1;
   }
 }
-.navBar {
+.navbar {
   list-style-type: none;
   z-index: 3;
   margin-top: 5px;
@@ -70,7 +72,9 @@ body {
   width: 98%;
   animation: flyIn 1s ease forwards;
 }
-
+.dropdown-menu{
+  z-index: 3;
+}
 /*box that takes up the space that the white header background used to take up*/
 .fillerbox {
   width: 100%;
