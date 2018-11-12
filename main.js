@@ -19,8 +19,9 @@ var CT = { //Connecticut centered location
 //var VermontData = "http://geodata.vermont.gov/datasets/3a87ceb1e3b944b89598abe6c4169f85_0.geojson"
 var geocoded = "https://raw.githubusercontent.com/theFatDads/GoogleMapsData/master/geo-locations.json"
 var drugBoxLocations = "https://data.ct.gov/api/geospatial/uem2-db2e?method=export&format=GeoJSON";
-var substanceAbuseCareFacilities = 
+var substanceAbuseCareFacilities = "https://map-update.herokuapp.com/substance-abuse-care-facilities-converted.json"
 function initMaps() {
   initgeoJSONMap("boxMap", CT, drugBoxLocations, ["location_name", "location_1_address", "city", "state"]);
+  initGeocodeMap("careMap",CT,substanceAbuseCareFacilities)
 }
 initMaps()

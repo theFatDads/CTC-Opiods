@@ -41,6 +41,19 @@ html, body {
   height: 20px;
   background-color:blue;
 }
+
+.navBar{
+  position:absolute;
+  display:block;
+  top:0;
+  left:0;
+  right:0;
+  background-color:blue;
+  margin:auto;
+  height:20px;
+  width:100%;
+}
+
 /*box that takes up the space that the white header background used to take up*/
 .fillerbox {
   width: 100%;
