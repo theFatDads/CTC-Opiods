@@ -102,8 +102,8 @@
     <div class="space"></div>
     <div class="container-fluid card">
       <div class="card-body">
-        <h2 class="card-title" role="doc-subtitle"><b>Step 3:</b> Dispose of leftover.</h2>
-        <p class="card-body" role="main">
+        <h2 class="card-title" role="doc-subtitle"><b>Step 3:</b> Dispose of extra.</h2>
+        <p class="card-body" role="main" aria-label="Step 3 Information">
           If you are done using your prescription, you should dispose of these drugs immediately.
           Proper disposal is crucial.
           These drugs should be dropped off at one of many different disposal locations.
@@ -111,7 +111,7 @@
           This reduces the chance that you or your loved ones accidentally take the drug or intentionally misuse the
           drug.
         </p>
-        <p class="card-body" role="main">
+        <p class="card-body" role="main" aria-label="Step 3 Information">
           Below is a map with the locations of drop off boxes in
           Connecticut. Tap a location and press "get directions" to get directions to a location.
         </p>
@@ -128,19 +128,45 @@
     <!--START CARD-->
     <div class="container-fluid card">
       <div class="card-body">
-        <h2 class="card-title" role="doc-subtitle">Step 4: Seek Help.</h2>
-        <p class="card-body" role="main" aria-label="step 4 information">-Talk about symptoms of addiction/withdrawl
-          symptoms to look for in family members</br>-Bring
-          up statistics about addiction
+        <h2 class="card-title" role="doc-subtitle"><b>Step 4:</b> Seek Help.</h2>
+        <p class="card-body" role="main" aria-label="Step 4 Information">
+          There are a number of different signs and symptoms to look for in individuals experiencing opioid abuse or
+          withdrawal. If you are experiencing these symptoms yourself or see them in a loved one, seek help
+          immediately.
+          Symptoms of abuse can be both physical, behavioral, or psychological, and can include drowsiness
+          shallow or slow breathing rate nausea, vomiting, constipation,
+          physical agitation, poor decision making
+
+          slurred speech, euphoria,
+          irritability, lowered motivation, anxiety attacks, depression.
+        </p>
+        <p class="card-body" role="main" aria-label="step 4 information"></p>
+        <a class="btn btn-dark" data-toggle="collapse" href="#expandStep4" role="button" aria-expanded="false"
+          aria-controls="collapse">
+          Open map with care facilities
+        </a>
+        <div class="collapse" id="expandStep4">
+          <div class="map" id="careMap"></div>
+        </div>
+      </div>
+    </div>
+    <!--END CARD-->
+    <div class="space"></div>
+    <!--START CARD-->
+    <div class="container-fluid card">
+      <div class="card-body">
+        <h2 class="card-title" role="doc-subtitle"><b>Step 5:</b> .</h2>
+        <p class="card-body" role="main" aria-label="step 5 information">
+          If a loved one continues abusing opioids over an extended period of time, then they are at risk of overdose.
+          Naxolone is a drug which can prevent overdose in an emergency.
+          Provided below is a map of all all locations that distribute Naxolone in Connecticut.
         </p>
         <a class="btn btn-dark" data-toggle="collapse" href="#expandStep4" role="button" aria-expanded="false"
           aria-controls="collapse">
-          Link with href
+          Open Naxolone Distribution Map
         </a>
         <div class="collapse" id="expandStep4">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
-          anim
-          keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          <div class="map" id="naxoloneMap"></div>
         </div>
       </div>
     </div>
