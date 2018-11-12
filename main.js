@@ -9,7 +9,7 @@ $(window).scroll(function () {
       return (elementHeight - scrollTop * 1.5) / elementHeight;
     }
   });
-});
+})
 
 //Initializing Maps
 var geocoder = new google.maps.Geocoder(); //Creating the needed URL.

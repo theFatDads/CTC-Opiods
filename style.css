@@ -59,30 +59,35 @@ body {
     opacity: 1;
   }
 }
+
+
 .navbar {
   list-style-type: none;
-  z-index: 3;
+  vertical-align: middle;
   margin-top: 5px;
   margin-left: 1%;
-  border-radius: 10px;
-  overflow: hidden;
+  border-radius: 5px;
   color: white;
   position: fixed;
   top: -10%;
   width: 98%;
+  height: 50px;
   animation: flyIn 1s ease forwards;
-}
-.dropdown-menu{
-  z-index: 3;
+} 
+.btn-group, .navButton{
+  top:-15px;
+  height:30px;
 }
 /*box that takes up the space that the white header background used to take up*/
 .fillerbox {
   width: 100%;
   height: 100%;
   opacity: 0%;
-  z-index: -1;
+  z-index: 0;
 }
-
+nav{
+  z-index:3000;
+}
 /*white header background */
 .oHeader {
   position: fixed;
@@ -214,9 +219,13 @@ body {
   height: 40vh;
   margin-top: 1em;
 }
-
+#return{
+  content:'Return where you left off';
+}
 @media only screen and (max-width: 700px) {
-
+  #return{
+    content:'Return';
+  }
   /*The text was small at */
   .card-title {
     font-size: 1.5em;
