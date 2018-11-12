@@ -31,9 +31,9 @@
 <body>
   <div class="fillerbox"></div>
   <div class="oHeader">
-    <div class="title-box">
+    <div class="title-box" role="banner">
       <div id="logo-div">
-        <img id="logo" src="images/Logo.svg">
+        <img id="logo" role="doc" src="images/Logo.svg">
       </div>
       <h1 id="title-text">The Next Step.</h1>
       <div id="desc-div">
@@ -53,8 +53,22 @@
     <!--START CARD-->
     <div class="container-fluid card">
       <div class="card-body">
-        <h2 class="card-img-top">Step 1: Look at your options.</h2>
-        <p class="card-body">-Main purpose will be saying why not to use opioids</br>-Will show statistics about dangers of opioids</br>-Acknowledge they are neccesary sometimes.a</p>
+        <h2 class="card-title" role="doc-subtitle"><b>Step 1:</b> Understand the Impacts and Seek Alternatives</h2>
+        <p class="card-body" role="main">
+          Opioids are a group of natural or synthetic drugs used by individuals for pain relief
+          When used as prescribed, opioids are extremely effective. However, even when they are taken as prescribed,
+          there is extreme potential for abuse and addiction.</p>
+
+        <p class="card-body" role="main">
+          Repeated use can lead to physical dependence in just a matter of weeks, and psychological dependence in only
+          a matter of days.
+          Therefore, <i>The Next Step</i> encourages those in need of painkillers to search for other options.
+          Over the counter alternatives as well as non-drug treatments that can be used for pain control that are
+          readily available.
+          These alternatives are much safer and more accessible. Prescribed opioids can be used in dire situations, but
+          under extreme caution.
+        </p>
+        </p>
         <a class="btn btn-dark" data-toggle="collapse" href="#expandStep1" role="button" aria-expanded="false"
           aria-controls="expandStep1">
           Link with href
@@ -70,8 +84,10 @@
     <div class="space"></div>
     <div class="container-fluid card">
       <div class="card-body">
-        <h2 class="card-img-top">Step 2: .</h2>
-        <p class="card-body">There's gonna be some text here. not sure yet though</p>
+        <h2 class="card-title" role="doc-subtitle"><b>Step 2:</b> .</h2>
+        <p class="card-body" role="main">
+          There's gonna be some text here. not sure yet though
+        </p>
         <a class="btn btn-dark" data-toggle="collapse" href="#expandStep2" role="button" aria-expanded="false"
           aria-controls="expandStep2">
           Link with href
@@ -86,54 +102,67 @@
     <div class="space"></div>
     <div class="container-fluid card">
       <div class="card-body">
-        <h2 class="card-img-top">Step 3: Dispose of leftover.</h2>
-        <p class="card-body">-Talk about the importance of disposing of extra</br>-Discuss risks associated with holding onto extra.
-        </br>When you or your loved one are done taking the drug you have been prescribed, it may be
-          time to think about disposing of the drug. Below is a map with the locations of drop off boxes in
-          Connecticut. Tap a location and press "get directions" to get directions to a location.</p>
-        <a class="btn btn-dark" data-toggle="collapse" href="#expandStep3" role="button"
-          aria-expanded="false" aria-controls="expandStep3">
+        <h2 class="card-title" role="doc-subtitle"><b>Step 3:</b> Dispose of leftover.</h2>
+        <p class="card-body" role="main">
+          If you are done using your prescription, you should dispose of these drugs immediately.
+          Proper disposal is crucial.
+          These drugs should be dropped off at one of many different disposal locations.
+          By not disposing of them, you put both yourself and family at risk.
+          This reduces the chance that you or your loved ones accidentally take the drug or intentionally misuse the
+          drug.
+        </p>
+        <p class="card-body" role="main">
+          Below is a map with the locations of drop off boxes in
+          Connecticut. Tap a location and press "get directions" to get directions to a location.
+        </p>
+        <a class="btn btn-dark" data-toggle="collapse" href="#expandStep3" role="button" aria-expanded="false"
+          aria-controls="expandStep3">
           Open Drug Box Map
         </a>
         <div class="collapse" id="expandStep3">
-          <div class="map" id="boxMap"></div>
+          <div class="map" id="boxMap" aria-label="Drug Box Map"></div>
         </div>
       </div>
     </div>
     <div class="space"></div>
-        <!--START CARD-->
-        <div class="container-fluid card">
-            <div class="card-body">
-              <h2 class="card-img-top">Step 4: Seek Help.</h2>
-              <p class="card-body">-Talk about symptoms of addiction/withdrawl symptoms to look for in family members</br>-Bring up statistics about addiction
-              </p>
-              <a class="btn btn-dark" data-toggle="collapse" href="#expandStep4" role="button" aria-expanded="false"
-                aria-controls="collapse">
-                Link with href
-              </a>
-              <div class="collapse" id="expandStep4">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                anim
-                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-              </div>
-            </div>
-          </div>
-          <!--END CARD-->
-        <div class="space"></div>
-        <!--START CARD-->
-        <div class="container-fluid card">
-          <div class="card-body">
-            <h2 class="card-img-top"></h2>
-            <p class="card-body">If you or a loved one is in need of additional help with opioid addiciton, please do not heasitate to call the toll-free, 24/7, confidential Opioid hotline with the button below.
-            </br>However, if you or a loved one is in danger, <b>do not heasitate to call 911.</b></p>
-            <a id='Hotline' class="btn btn-warning" href="tel:1-352-771-2700">Opioid Hotline: 352-771-2700</a>
-          </div>
+    <!--START CARD-->
+    <div class="container-fluid card">
+      <div class="card-body">
+        <h2 class="card-title" role="doc-subtitle">Step 4: Seek Help.</h2>
+        <p class="card-body" role="main" aria-label="step 4 information">-Talk about symptoms of addiction/withdrawl
+          symptoms to look for in family members</br>-Bring
+          up statistics about addiction
+        </p>
+        <a class="btn btn-dark" data-toggle="collapse" href="#expandStep4" role="button" aria-expanded="false"
+          aria-controls="collapse">
+          Link with href
+        </a>
+        <div class="collapse" id="expandStep4">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
+          anim
+          keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
         </div>
-        <!--END CARD-->
+      </div>
+    </div>
+    <!--END CARD-->
+    <div class="space"></div>
+    <!--START CARD-->
+    <div class="container-fluid card">
+      <div class="card-body">
+        <h2 class="card-title" role="doc-subtitle"></h2>
+        <p class="card-body" role="main">If you or a loved one is in need of additional help with opioid addiciton,
+          please do not
+          heasitate to call the toll-free, 24/7, confidential Opioid hotline with the button below.
+          </br>However, if you or a loved one is in danger, <b>do not heasitate to call 911.</b></p>
+        <a id='Hotline' class="btn btn-warning" role="button" href="tel:1-352-771-2700">Opioid Hotline: 352-771-2700</a>
+      </div>
+    </div>
+    <!--END CARD-->
   </div>
-      <div class="space"></div>
+  <div class="space"></div>
   <div class="footer"></div>
 </body>
+
 <!--Data-importing Maps Functions included in Main.js-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0ryZpgxKmnM81pq9e-tAbh7Zu39G5BBI"></script>
 <script src="MapsData.js"></script>

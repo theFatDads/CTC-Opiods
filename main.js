@@ -20,7 +20,8 @@ var CT = { //Connecticut centered location
 var geocoded = "https://raw.githubusercontent.com/theFatDads/GoogleMapsData/master/geo-locations.json"
 var drugBox = "https://data.ct.gov/api/geospatial/uem2-db2e?method=export&format=GeoJSON";
 var processedCareFacilities = "https://data.ct.gov/resource/htz8-fxbk.json";
-function initMaps(){
-  initgeoJSONMap("boxMap",CT, drugBox, ["location_name", "location_1_address", "city", "state"]);
+
+function initMaps() {
+  initgeoJSONMap("boxMap", CT, drugBox, ["location_name", "location_1_address", "city", "state"]);
 }
 initMaps()
