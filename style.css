@@ -150,8 +150,9 @@ body {
   color: white;
   border: none;
    background: #fa7575;
-  animation: Gradient 10s linear infinite;
-  animation-direction: alternate-reverse;
+  animation: Gradient 15s linear infinite;
+  animation-direction: alternate;
+  animation-delay: -5s;
 }
 
 /* The actual timeline (the vertical ruler) */

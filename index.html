@@ -34,17 +34,17 @@
     <!--Begin navBar-->
     <nav class="navbar navbar-dark bg-dark">
       <li class="nav-item dropdown">
-        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+        <a class="nav-link" href="#" id="navbarDropdown" role="index" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
           <img src="http://www.stickpng.com/assets/images/588a64e7d06f6719692a2d11.png" height="35px">
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" onclick="$.scrollTo('#Understand',800)" href="#">Understand</a>
-          <a class="dropdown-item" onclick="$.scrollTo('#Do',800)" href="#">Do</a>
-          <a class="dropdown-item" onclick="$.scrollTo('#Dispose',800)" href="#">Dispose</a>
-          <a class="dropdown-item" onclick="$.scrollTo('#Seek',800)" href="#">Seek</a>
-          <a class="dropdown-item" onclick="$.scrollTo('#Assist',800)" href="#">Assist</a>
-          <a class="dropdown-item" onclick="$.scrollTo('#Call',800)" href="#">Call</a>
+          <a class="dropdown-item" onclick="$.scrollTo('#Understand',800)" role="button" href="#">Understand</a>
+          <a class="dropdown-item" onclick="$.scrollTo('#Do',800)" role="button" href="#">Do</a>
+          <a class="dropdown-item" onclick="$.scrollTo('#Dispose',800)" role="button" href="#">Dispose</a>
+          <a class="dropdown-item" onclick="$.scrollTo('#Seek',800)" role="button" href="#">Seek</a>
+          <a class="dropdown-item" onclick="$.scrollTo('#Assist',800)" role="button" href="#">Assist</a>
+          <a class="dropdown-item" onclick="$.scrollTo('#Call',800)" role="button" href="#">Call</a>
         </div>
       </li>
 
@@ -76,7 +76,7 @@
         <p class="card-body" role="main">
           Opioids are a group of natural or synthetic drugs used by individuals for pain relief
           When used as prescribed, opioids are extremely effective. However, even when they are taken as prescribed,
-          there is extreme potential for abuse and addiction.</p>
+          there is extreme potential for addiction.</p>
 
         <p class="card-body" role="main">
           Repeated use can lead to physical dependence in just a matter of weeks, and psychological dependence in only
@@ -143,11 +143,11 @@
           withdrawal. If you are experiencing these symptoms yourself or see them in a loved one, seek help
           immediately.
           Symptoms of abuse can be both physical, behavioral, or psychological.
-          They include, but are not limited to, drowsiness,
+          They include (but are not limited to) drowsiness,
           shallow or slow breathing, nausea, vomiting, constipation,
           physical agitation, poor decision making,
           slurred speech, euphoria,
-          irritability, lowered motivation, anxiety attacks, depression.
+          irritability, lowered motivation, anxiety attacks, depression. Symptoms could be signs of abuse of opioids.
         </p>
         <p class="card-body" role="main" aria-label="step 4 information">
           If opioid abuse continues in a loved one for weeks after they have finished their prescription, they are at
@@ -155,7 +155,8 @@
           Withdrawl symptoms include
           nausea, chills, diarrhea, shaking pain, depression, insomnia, fatigue.
           If you are experiencing withdrawals,
-          work with your doctor to lower your dose over time.
+          work with your doctor to lower your dose over time, or seek help from a care facility.</br>
+          Mapped below are the care facilities that are availabe in Connecticut. 
         </p>
         <a class="btn btn-dark" data-toggle="collapse" href="#expandStep4" role="button" aria-expanded="false"
           aria-controls="collapse">
@@ -179,7 +180,7 @@
         </p>
         <a class="btn btn-dark" data-toggle="collapse" href="#expandStep5" role="button" aria-expanded="false"
           aria-controls="collapse">
-          Map 
+          Map
         </a>
         <div class="collapse" id="expandStep5">
           <div class="map" id="naxoloneMap"></div>
@@ -202,7 +203,7 @@
     <!--END CARD-->
   </div>
   <div style="height:10px;"></div>
-  <div id="Info" class="card">
+  <div id="Info" class="card" role="">
     <h4><b>About</b> this website</h4>
     <p>This website was made for the <i>Connecticut Technology Council's</i> College Tech Challenge.</p>
     <p>Data used from this app was pulled from <a href="https://data.ct.gov">data.ct.gov</a>.</p>
@@ -211,11 +212,13 @@
           Drug Related Deaths (2012-2017)</a></li>
       <li><a href="https://data.ct.gov/Health-and-Human-Services/Locations-of-Prescription-Drug-Boxes-Map/5e4g-stz3">Locations
           of Prescription Drug Boxes</a></li>
-      <li><a href="https://data.ct.gov/Health-and-Human-Services/Substance-Abuse-Care-Facilities/htz8-fxbk">Substance Abuse Care Facilities</a></li>
-      <li><a href="https://data.ct.gov/Public-Safety/Pharmacies-offering-Narcan-Evzio-and-other-brands-/tbgy-vw5z">Pharmacies offering Narcan, Evzio and other brands of Naloxone
-      </a></li>
+      <li><a href="https://data.ct.gov/Health-and-Human-Services/Substance-Abuse-Care-Facilities/htz8-fxbk">Substance
+          Abuse Care Facilities</a></li>
+      <li><a href="https://data.ct.gov/Public-Safety/Pharmacies-offering-Narcan-Evzio-and-other-brands-/tbgy-vw5z">Pharmacies
+          offering Narcan, Evzio and other brands of Naloxone
+        </a></li>
     </ul>
-    <p>For information on the frameworks and, please visit <a href="https://github.com/theFatDads/">our Team's Github
+    <p>For information on the creation of this webpage, please visit <a href="https://github.com/theFatDads/">our Team's Github
         page</a>.</p>
   </div>
 </body>

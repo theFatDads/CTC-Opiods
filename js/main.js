@@ -2,7 +2,6 @@ console.log('hello world');
 //change opacity of title-card depending on how far you scroll
 $(window).scroll(function () {
   var scrollTop = $(this).scrollTop();
-
   $('.oHeader').css({
     opacity: function () {
       var elementHeight = $(this).height();
@@ -10,7 +9,6 @@ $(window).scroll(function () {
     }
   });
 })
-
 //Initializing Maps
 var geocoder = new google.maps.Geocoder(); //Creating the needed URL.
 var CT = { //Connecticut centered location
@@ -21,8 +19,15 @@ var CT = { //Connecticut centered location
 var geocoded = "https://raw.githubusercontent.com/theFatDads/GoogleMapsData/master/geo-locations.json"
 var drugBoxLocations = "https://data.ct.gov/api/geospatial/uem2-db2e?method=export&format=GeoJSON";
 var substanceAbuseCareFacilities = "https://map-update.herokuapp.com/substance-abuse-care-facilities-converted.json"
-function initMaps() {
-  initgeoJSONMap("boxMap", CT, drugBoxLocations, ["location_name", "location_1_address", "city", "state"]);
-  initGeocodeMap("careMap",CT,substanceAbuseCareFacilities)
+function initMaps(center) {
+  initgeoJSONMap("boxMap", center, drugBoxLocations, ["location_name", "location_1_address", "city", "state"]);
+  initGeocodeMap("careMap",center,substanceAbuseCareFacilities)
 }
-initMaps()
+function centerToUser(position){
+  var userPos = {
+    lat: position.coords.latitude,
+    lng: position.coords.longitude
+  };
+  initMaps(userPos)
+}
+navigator.geolocation.getCurrentPosition(centerToUser,initMaps(CT));
