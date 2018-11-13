@@ -25,29 +25,31 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-  <script src="jquery.scrollTo.min.js"></script>
+  <script src="js/jquery.scrollTo.min.js"></script>
 </head>
 
-<body>
+<body class="pulsingColor">
   <div class="fillerbox"></div>
   <div class="oHeader">
     <!--Begin navBar-->
     <nav class="navbar navbar-dark bg-dark">
-    <li class="nav-item dropdown">
-      <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
           <img src="http://www.stickpng.com/assets/images/588a64e7d06f6719692a2d11.png" height="35px">
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" onclick="$.scrollTo('#Understand',800)" href="#">Understand</a>
-        <a class="dropdown-item" onclick="$.scrollTo('#Do',800)" href="#">Do</a>
-        <a class="dropdown-item" onclick="$.scrollTo('#Dispose',800)" href="#">Dispose</a>
-        <a class="dropdown-item" onclick="$.scrollTo('#Seek',800)" href="#">Seek</a>   
-        <a class="dropdown-item" onclick="$.scrollTo('#Assist',800)" href="#">Assist</a>
-        <a class="dropdown-item" onclick="$.scrollTo('#Footer',800)" href="#">Footer</a>
-      </div>
-    </li>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" onclick="$.scrollTo('#Understand',800)" href="#">Understand</a>
+          <a class="dropdown-item" onclick="$.scrollTo('#Do',800)" href="#">Do</a>
+          <a class="dropdown-item" onclick="$.scrollTo('#Dispose',800)" href="#">Dispose</a>
+          <a class="dropdown-item" onclick="$.scrollTo('#Seek',800)" href="#">Seek</a>
+          <a class="dropdown-item" onclick="$.scrollTo('#Assist',800)" href="#">Assist</a>
+          <a class="dropdown-item" onclick="$.scrollTo('#Call',800)" href="#">Call</a>
+        </div>
+      </li>
+
       <form class="form-inline">
-        <button id="return" class="btn btn-outline-warning my-2 my-sm-0" type="submit">Return Where you Left Off</button>
+        <button id="return" class="btn btn-light my-2 my-sm-0" type="submit"></button>
     </nav>
     <!--End NavBar-->
     <div class="title-box" role="banner">
@@ -68,7 +70,7 @@
   <div class="halfSpace"></div>
   <div class="timeline">
     <!--START CARD-->
-    <div id="Understand" class="container-fluid card">
+    <div id="Understand" class="timeline-card container-fluid card">
       <div class="card-body">
         <h2 class="card-title" role="doc-subtitle"><b>Understand</b> the Impacts and Seek Alternatives</h2>
         <p class="card-body" role="main">
@@ -83,23 +85,14 @@
           Over the counter alternatives as well as non-drug treatments that can be used for pain control that are
           readily available.
           These alternatives are much safer and more accessible. Prescribed opioids can be used in dire situations, but
-          under extreme caution.
+          extreme caution should be taken.
         </p>
         </p>
-        <a class="btn btn-dark" data-toggle="collapse" href="#expandStep1" role="button" aria-expanded="false"
-          aria-controls="expandStep1">
-          Link with href
-        </a>
-        <div class="collapse" id="expandStep1">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
-          anim
-          keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-        </div>
       </div>
     </div>
     <!--END CARD-->
     <div class="space"></div>
-    <div class="container-fluid card">
+    <div class="timeline-card container-fluid card">
       <div id="Do" class="card-body">
         <h2 class="card-title" role="doc-subtitle"><b>Do something</b> while youre using opioids (Not sure)</h2>
         <p class="card-body" role="main">
@@ -117,7 +110,7 @@
       </div>
     </div>
     <div class="space"></div>
-    <div class="container-fluid card">
+    <div class="timeline-card container-fluid card">
       <div id="Dispose" class="card-body">
         <h2 class="card-title" role="doc-subtitle"><b>Dispose</b> of extra opioids</h2>
         <p class="card-body" role="main" aria-label="Disposal information">
@@ -133,7 +126,7 @@
         </p>
         <a class="btn btn-dark" data-toggle="collapse" href="#expandStep3" role="button" aria-expanded="false"
           aria-controls="expandStep3">
-          Open Drug Box Map
+          Map with Drug Boxes
         </a>
         <div class="collapse" id="expandStep3">
           <div class="map" id="boxMap" aria-label="Drug Box Map"></div>
@@ -142,7 +135,7 @@
     </div>
     <div class="space"></div>
     <!--START CARD-->
-    <div class="container-fluid card">
+    <div class="timeline-card container-fluid card">
       <div id="Seek" class="card-body">
         <h2 class="card-title" role="doc-subtitle"><b>Seek</b> Help.</h2>
         <p class="card-body" role="main" aria-label="Step 4 Information">
@@ -166,7 +159,7 @@
         </p>
         <a class="btn btn-dark" data-toggle="collapse" href="#expandStep4" role="button" aria-expanded="false"
           aria-controls="collapse">
-          Open map with care facilities
+          Map with Care Facilities
         </a>
         <div class="collapse" id="expandStep4">
           <div class="map" id="careMap"></div>
@@ -176,7 +169,7 @@
     <!--END CARD-->
     <div class="space"></div>
     <!--START CARD-->
-    <div class="container-fluid card">
+    <div class="timeline-card container-fluid card">
       <div id="Assist" class="card-body">
         <h2 class="card-title" role="doc-subtitle"><b>Assist</b> loved ones in need.</h2>
         <p class="card-body" role="main" aria-label="step 5 information">
@@ -186,7 +179,7 @@
         </p>
         <a class="btn btn-dark" data-toggle="collapse" href="#expandStep5" role="button" aria-expanded="false"
           aria-controls="collapse">
-          Open Naxolone Distribution Map
+          Map 
         </a>
         <div class="collapse" id="expandStep5">
           <div class="map" id="naxoloneMap"></div>
@@ -196,26 +189,40 @@
     <!--END CARD-->
     <div class="space"></div>
     <!--START CARD-->
-    <div class="container-fluid card">
-      <div id="Footer" class="card-body">
-        <h2 class="card-title" role="doc-subtitle"></h2>
+    <div class="timeline-card container-fluid card">
+      <div id="Call" class="card-body">
+        <h2 class="card-title" role="doc-subtitle"><b>Call</b> for help.</h2>
         <p class="card-body" role="main">If you or a loved one is in need of additional help with opioid addiciton,
           please do not
           heasitate to call the toll-free, 24/7, confidential Opioid hotline with the button below.
           </br>However, if you or a loved one is in danger, <b>do not heasitate to call 911.</b></p>
-        <a id='Hotline' class="btn btn-warning" role="button" href="tel:1-352-771-2700">Opioid Hotline: 352-771-2700</a>
+        <a id='Hotline' class="btn btn-warning" role="button" href="tel:1-352-771-2700">Hotline: 352-771-2700</a>
       </div>
     </div>
     <!--END CARD-->
   </div>
-  <div class="space"></div>
-  <div class="footer"></div>
+  <div style="height:10px;"></div>
+  <div id="Info" class="card">
+    <h4><b>About</b> this website</h4>
+    <p>This website was made for the <i>Connecticut Technology Council's</i> College Tech Challenge.</p>
+    <p>Data used from this app was pulled from <a href="https://data.ct.gov">data.ct.gov</a>.</p>
+    <ul>
+      <li><a href="https://data.ct.gov/Health-and-Human-Services/Accidental-Drug-Related-Deaths-2012-2017/rybz-nyjw">Accidental
+          Drug Related Deaths (2012-2017)</a></li>
+      <li><a href="https://data.ct.gov/Health-and-Human-Services/Locations-of-Prescription-Drug-Boxes-Map/5e4g-stz3">Locations
+          of Prescription Drug Boxes</a></li>
+      <li><a href="https://data.ct.gov/Health-and-Human-Services/Substance-Abuse-Care-Facilities/htz8-fxbk">Substance Abuse Care Facilities</a></li>
+      <li><a href="https://data.ct.gov/Public-Safety/Pharmacies-offering-Narcan-Evzio-and-other-brands-/tbgy-vw5z">Pharmacies offering Narcan, Evzio and other brands of Naloxone
+      </a></li>
+    </ul>
+    <p>For information on the frameworks and, please visit <a href="https://github.com/theFatDads/">our Team's Github
+        page</a>.</p>
+  </div>
 </body>
-
 <!--Data-importing Maps Functions included in Main.js-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0ryZpgxKmnM81pq9e-tAbh7Zu39G5BBI"></script>
-<script src="MapsData.js"></script>
+<script src="js/MapsData.js"></script>
 <!--Main js File-->
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 
 </html>
