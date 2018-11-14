@@ -21,6 +21,7 @@ In designing our website, we used:
 ## The Framework
 To represent the data from data.ct.gov in a map, we used the Google Maps embed and geolocation APIs to interpret data and represent it.
 
+map-update is a web server created by us to regularly refresh our geolocated data with that from data.ct.gov. By using the Google Maps geolocation API we are able to make certain datasets visible on a map with directions, when they normally couldn't be.
 
 ## Additional programs and libraries used
 * https://github.com/flesler/jquery.scrollTo a Jquery scrolling library for easily controlling the user's location on the page
