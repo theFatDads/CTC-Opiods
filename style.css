@@ -1,12 +1,11 @@
 html,
 body {
-  /*background: linear-gradient(332deg, #ff8c6a, #fa7575, #910efc);*/
-
   background-size: 800% 800%;
   height: 100%;
 
 }
-.pulsingColor{
+
+.pulsingColor {
   background: #fa7575;
   animation: Gradient 10s linear infinite;
   animation-direction: alternate;
@@ -36,45 +35,6 @@ body {
   }
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  75% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes flyIn {
-  0%{
-    top: -10%;
-    opacity: 0;
-  }
-  100%{
-    top:0;
-    opacity: 1;
-  }
-}
-
-
-.navbar {
-  list-style-type: none;
-  vertical-align: middle;
-  margin-top: 5px;
-  margin-left: 1%;
-  border-radius: 5px;
-  color: white;
-  position: fixed;
-  top: -10%;
-  width: 98%;
-  height: 50px;
-  animation: flyIn 1s ease forwards;
-} 
 /*box that takes up the space that the white header background used to take up*/
 .fillerbox {
   width: 100%;
@@ -107,6 +67,12 @@ body {
 #logo {
   width: 200px;
   height: 30vh;
+}
+
+#drug-deaths-data {
+  margin: auto;
+  text-align: center;
+  width: 100%;
 }
 
 /*Title Text*/
@@ -144,33 +110,39 @@ body {
   background-color: #646464 !important;
   color: white;
   border: none;
-   background: #fa7575;
+  background: #fa7575;
   animation: Gradient 15s linear infinite;
   animation-direction: alternate;
   animation-delay: -5s;
 }
-#button1{
-  background:#c56869;
-  color:white;
-}
-#button2{
-  background:#ce4b4e;
-  color:white;
-}
-#button3{
-  background:#b43134;
-  color:white;
-}
-#button4{
-  background:#8c2629;
 
-  color:white;
+#button1 {
+  background: #c56869;
+  color: white;
 }
-#button5{
-  background:#641b1d;
 
-  color:white;
+#button2 {
+  background: #ce4b4e;
+  color: white;
 }
+
+#button3 {
+  background: #b43134;
+  color: white;
+}
+
+#button4 {
+  background: #8c2629;
+
+  color: white;
+}
+
+#button5 {
+  background: #641b1d;
+
+  color: white;
+}
+
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
@@ -191,7 +163,7 @@ body {
 /* Container around content */
 .timeline-card {
   left: 40px;
-  right: 1em;
+  right: 4em;
 }
 
 .card-body {
@@ -226,67 +198,88 @@ body {
   height: 60vh;
   margin-top: 1em;
 }
-#return{
-  content:'Return where you left off';
+
+#return {
+  content: 'Return where you left off';
 }
-#Info{
+
+#Info {
   border: none;
-  margin:10px 10px;
+  margin: 10px 10px;
   padding: 10px 10px;
 }
+
 @media only screen and (max-width: 700px) {
+
   /*The text was small at */
   .card-title {
     font-size: 1.5em;
   }
+
   .card-body {
     padding: 10px;
     padding-top: 20px;
     font-size: .9em;
   }
-  .map{
+
+  .map {
     width: 108%;
     left: -4%;
     right: -4%;
   }
 }
+
 @media only screen and (max-width: 450px) {
+
   /*The text was small at */
   .card-title {
     font-size: 1.5em;
   }
-  #Info{
+
+  #drug-deaths-svg {
+    margin: auto;
+    text-align: center;
+    width: 200px;
+  }
+
+  #Info {
     border: none;
-    margin:20px 1em;
+    margin: 20px 1em;
     padding: 10px 10px;
   }
+
   .card-body {
-    margin:0px 0px;
+    margin: 0px 0px;
     padding: 20px 0px 10px 0px;
     font-size: .9em;
   }
+
   .timeline-card {
     left: 0px;
-    right: 0em;
-    width:100%;
+    right: 0px;
+    width: 100%;
   }
-  .timeline{
-    margin: 0em 1em 0em 1em;
+
+  .timeline {
+    margin: 0em .5em 0em .5em;
   }
-  .space{
-    height:70px;
+
+  .space {
+    height: 70px;
   }
+
   /* Removes Line */
-.timeline::after {
-  width: 0px;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-}
-/*Removes circle*/
-.timeline-card::after {
-  width: 0px;
-  height: 0px;
-}
+  .timeline::after {
+    width: 0px;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+  }
+
+  /*Removes circle*/
+  .timeline-card::after {
+    width: 0px;
+    height: 0px;
+  }
 
 }

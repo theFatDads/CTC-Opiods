@@ -29,7 +29,7 @@ function addressToURL(address, city, state) {
 
 function formatInfoBox(name, address, city, state, url) {
   /* Formats the data for each marker on the map to be used in the info box. */
-  return `<b>${name}</b><p>${address} ${city}, ${state} \n</br><a href="${url}">Get Directions</a></p>`
+  return `<b>${name}</b><p>${address} ${city}, ${state} \n</br><a href="${url}" target="_blank">Get Directions</a></p>`
 }
 
 function initgeoJSONMap(mapID, center, geoJSONLink, info) {

@@ -1,4 +1,5 @@
 /*FORMATTING*/
+buttonWidth = $("#nav-buttons").width();
 if ($(window).width() > $("#nav-buttons").width()) {
   $('#nav-buttons').addClass('btn-group btn-group-lg')
 } else {
@@ -19,7 +20,6 @@ $(window).scroll(function () {
   });
 })
 //Changes button layout for use on mobile
-buttonWidth = $("#nav-buttons").width();
 $(window).on('resize', function () {
   if ($(window).width() > buttonWidth) {
     $('#nav-buttons').addClass('btn-group btn-group-lg');
@@ -27,6 +27,7 @@ $(window).on('resize', function () {
     $('#nav-buttons').removeClass('btn-group btn-group-lg');
   }
 });
+
 /*INITIALIZING MAPS*/
 var geocoder = new google.maps.Geocoder(); //Creating the needed URL.
 var CT = { //Connecticut centered location
@@ -40,8 +41,9 @@ var naloxoneLocations = "https://map-update.herokuapp.com/pharmacies-with-naxalo
 function initMaps(center) {
   initgeoJSONMap("boxMap", center, drugBoxLocations, ["location_name", "location_1_address", "city", "state"]);
   initGeocodeMap("careMap", center, substanceAbuseCareFacilities)
-  initGeocodeMap("naloxoneMap",center,naloxoneLocations)
+  initGeocodeMap("naloxoneMap", center, naloxoneLocations)
 }
+
 function centerToUser(position) {
   var userPos = {
     lat: position.coords.latitude,
