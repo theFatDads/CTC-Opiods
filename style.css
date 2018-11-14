@@ -78,7 +78,7 @@ body {
 /*Title Text*/
 #title-text {
   display: auto;
-  font-size: 6vw;
+  font-size: 10vw;
 }
 
 .main-description {
@@ -226,6 +226,10 @@ body {
     width: 108%;
     left: -4%;
     right: -4%;
+  }
+  #title-text {
+    display: auto;
+    font-size: 13vw;
   }
 }
 
