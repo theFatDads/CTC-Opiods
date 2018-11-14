@@ -8,17 +8,17 @@ body {
 }
 .pulsingColor{
   background: #fa7575;
-  animation: Gradient 15s linear infinite;
+  animation: Gradient 10s linear infinite;
   animation-direction: alternate;
 }
 
 @keyframes Gradient {
   0% {
-    background: #fa7575;
+    background: #da6163
   }
 
   100% {
-    background: #910efc;
+    background: #641b1d
   }
 }
 
@@ -148,22 +148,28 @@ body {
   animation: Gradient 15s linear infinite;
   animation-direction: alternate;
   animation-delay: -5s;
-  border: 1px solid black;
 }
 #button1{
-  animation-delay: -2s;
+  background:#c56869;
+  color:white;
 }
 #button2{
-  animation-delay: -4s;
+  background:#ce4b4e;
+  color:white;
 }
 #button3{
-  animation-delay: -6s;
+  background:#b43134;
+  color:white;
 }
 #button4{
-  animation-delay: -8s;
+  background:#8c2629;
+
+  color:white;
 }
 #button5{
-  animation-delay: -10s;
+  background:#641b1d;
+
+  color:white;
 }
 /* The actual timeline (the vertical ruler) */
 .timeline {
@@ -233,14 +239,18 @@ body {
   .card-title {
     font-size: 1.5em;
   }
-
   .card-body {
     padding: 10px;
     padding-top: 20px;
     font-size: .9em;
   }
+  .map{
+    width: 108%;
+    left: -4%;
+    right: -4%;
+  }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   /*The text was small at */
   .card-title {
     font-size: 1.5em;
@@ -252,8 +262,7 @@ body {
   }
   .card-body {
     margin:10px 0px;
-    padding: 0px 5px 10px 5px;
-    padding-top: 20px;
+    padding: 20px 0px 10px 0px;
     font-size: .9em;
   }
   .timeline-card {
