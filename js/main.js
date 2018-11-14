@@ -1,4 +1,8 @@
-console.log('hello world');
+//Resets the app on a reload
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
 //change opacity of title-card depending on how far you scroll
 $(window).scroll(function () {
   var scrollTop = $(this).scrollTop();
