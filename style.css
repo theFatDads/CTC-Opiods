@@ -138,11 +138,6 @@ body {
   animation: wiggle 2s ease infinite;
 }
 
-#fadeinbox {
-  opacity: 0;
-  animation: fadeIn 2s linear forwards;
-}
-
 .btn-dark,
 .btn-dark:hover,
 .btn-dark:active {
@@ -153,8 +148,23 @@ body {
   animation: Gradient 15s linear infinite;
   animation-direction: alternate;
   animation-delay: -5s;
+  border: 1px solid black;
 }
-
+#button1{
+  animation-delay: -2s;
+}
+#button2{
+  animation-delay: -4s;
+}
+#button3{
+  animation-delay: -6s;
+}
+#button4{
+  animation-delay: -8s;
+}
+#button5{
+  animation-delay: -10s;
+}
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;

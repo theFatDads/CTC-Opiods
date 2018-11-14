@@ -31,40 +31,21 @@
 <body id="top" class="pulsingColor">
   <div class="fillerbox"></div>
   <div class="oHeader">
-    <!--Begin navBar-->
-    <nav class="navbar navbar-dark bg-dark">
-      <li class="nav-item dropdown">
-        <a class="nav-link" href="#" id="navbarDropdown" role="index" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">
-          <img src="http://www.stickpng.com/assets/images/588a64e7d06f6719692a2d11.png" height="35px">
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" onclick="$.scrollTo('#Understand',800)" role="button" href="#">Understand</a>
-          <a class="dropdown-item" onclick="$.scrollTo('#Dispose',800)" role="button" href="#">Dispose</a>
-          <a class="dropdown-item" onclick="$.scrollTo('#Seek',800)" role="button" href="#">Seek</a>
-          <a class="dropdown-item" onclick="$.scrollTo('#Assist',800)" role="button" href="#">Assist</a>
-          <a class="dropdown-item" onclick="$.scrollTo('#Call',800)" role="button" href="#">Call</a>
-        </div>
-      </li>
-
-      <form class="form-inline">
-        <button id="return" class="btn btn-light my-2 my-sm-0" type="submit"></button>
-    </nav>
-    <!--End NavBar-->
     <div class="title-box" role="banner">
       <div id="logo-div">
         <img id="logo" role="doc" src="images/Logo.svg">
       </div>
       <h1 id="title-text">The Next Step.</h1>
-      <div id="desc-div">
-        <p class="main-description">When using or abusing opioids, you need to focus on taking steps towards further
-          recovery.
-          TheNextStep is designed to help you achieve those steps.</p>
+      <h4 id="I-need">I Need...</h4>
+      <div class="btn-group btn-group-lg" role="group" aria-labelledby="Navigation buttons">
+        <button id="button1" class="btn btn-light" onclick="$.scrollTo('#Understand',800)" role="button">Understand</button>
+        <button id="button2" class="btn btn-light" onclick="$.scrollTo('#Dispose',800)" role="button">Dispose</button>
+        <button id="button3" class="btn btn-light" onclick="$.scrollTo('#Seek',800)" role="button">Seek</button>
+        <button id="button4" class="btn btn-light" onclick="$.scrollTo('#Assist',800)" role="button">Assist</button>
+        <button id="button5" class="btn btn-light" onclick="$.scrollTo('#Call',800)" role="button">Call</button>
       </div>
     </div>
-    <div id="fadeinbox">
       <div id="V" onclick="$.scrollTo('#Understand',500)"><img id="arrow" src="images/scroll-arrow.svg"></img></div>
-    </div>
   </div>
   <div class="halfSpace"></div>
   <div class="timeline">
@@ -137,7 +118,7 @@
           nausea, chills, diarrhea, shaking pain, depression, insomnia, fatigue.
           If you are experiencing withdrawals,
           work with your doctor to lower your dose over time, or seek help from a care facility.</br>
-          Mapped below are the care facilities that are availabe in Connecticut. 
+          Mapped below are the care facilities that are availabe in Connecticut.
         </p>
         <a class="btn btn-dark" data-toggle="collapse" href="#expandStep4" role="button" aria-expanded="false"
           aria-controls="collapse">
@@ -198,7 +179,8 @@
           offering Narcan, Evzio and other brands of Naloxone
         </a></li>
     </ul>
-    <p>For information on the creation of this webpage, please visit <a href="https://github.com/theFatDads/">our Team's Github
+    <p>For information on the creation of this webpage, please visit <a href="https://github.com/theFatDads/">our
+        Team's Github
         page</a>.</p>
   </div>
 </body>
