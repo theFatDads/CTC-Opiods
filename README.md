@@ -27,6 +27,10 @@ To represent the data from data.ct.gov in a map, we used the Google Maps embed a
 
 Fetch-geolocations is a web server created by us to regularly refresh our geolocated data with that from data.ct.gov. By using the Google Maps geolocation API we are able to make certain datasets visible on a map with directions, when they normally couldn't be.
 
+* https://github.com/theFatDads/Data-Processing
+
+We used javascript and the REST API to download data from data.ct.gov and consolidate it into interpreted values.
+
 ## Additional programs and libraries used
 * https://github.com/flesler/jquery.scrollTo a Jquery scrolling library for easily controlling the user's location on the page
 * https://realfavicongenerator.net for favicon generation from our logo
