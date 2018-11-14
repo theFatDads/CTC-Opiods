@@ -1,16 +1,28 @@
 # The Next Step
-___
 ## Our Goal
-When designing our submission for the Connecticut Tech Challenge, we wanted to attempt to help as many people who are involved with opioids as possible. We wanted to help those who are considering taking opioids, those who are currently taking opioids, and those who are abusing opioids.
-## Our Direction
-_The Next Step_ is a timeline-based information resource for providing users in Connecticut with data and resources to assist them with Opioids in every step of the process. 
+When designing our submission for the Connecticut College Tech Challenge, we acknowledged that opioids effected all demographics of people. Anyone who was in pain was at risk of using, and the subsequently abusing opioids.
 
-We determined a timeline would be the best way of representing this process, as the usage of opioids should be a process, with a beginning and end.
-___
+We wanted to create a webapp which could provide resources for as many groups of people as possible. Our webapp should be able to assist anyone who has or will take opioids.
+
+## Our Direction
+_The Next Step_ is a timeline style information resource for providing people in Connecticut with data and resources to assist them with Opioids in every step of the process. 
+
+_The Next Step_ should be used as a quick, easy to navigate resource to provide suggestions to lead people away from opioid usage, and towards recovery or an alternative.
+
+
 ## The Code
 In designing our website, we used:
 * HTML, CSS, and JavaScript
-* Bootstrap
+* Bootstrap 4 for card creation
+* Jquery for webpage interaction
 * The Google Maps API
-* Data from data.CT.gov
+* Data from https://data.CT.gov acquired with the REST API.
+
+## The Framework
+To represent the data from data.ct.gov in a map, we used the Google Maps embed and geolocation APIs to interpret data and represent it.
+
+
+## Additional programs and libraries used
+* https://github.com/flesler/jquery.scrollTo a Jquery scrolling library for easily controlling the user's location on the page
 * https://realfavicongenerator.net for favicon generation from our logo
+* Google Data Studio for creating our pie chart
